@@ -18,6 +18,7 @@ class RootIndex extends React.Component {
           title={author.name}
           content={author.shortBio}
         />
+        <h1>Hi</h1>
         <ArticlePreview posts={posts} />
       </Layout>
     )
@@ -57,11 +58,7 @@ export const pageQuery = graphql`
         }
         title
         heroImage: image {
-          gatsbyImage(
-            layout: CONSTRAINED
-            placeholder: BLURRED
-            width: 1180
-          )
+          gatsbyImage(layout: CONSTRAINED, placeholder: BLURRED, width: 1180)
         }
       }
     }
